@@ -14,3 +14,18 @@ int main() {
     printf("sum = %d", sum);
 return 0;
 }
+
+#include <stdio.h>
+
+int main() {
+    int *arr = (int*)calloc(5, sizeof(int));
+    printf("Enter elements: \n");
+    for(int i=0; i<5; i++){
+        scanf("%d", arr+i);
+    }
+    for(int i=0; i<5; i++){
+        printf("%d\t", *(arr+i));
+    }
+    free(arr);
+return 0;
+}
